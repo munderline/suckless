@@ -6,8 +6,8 @@ jsproxy_config({
 
   // 通过 CDN 加速常用网站的静态资源（实验中）
   static_boost: {
-    enable: true,
-    ver: 60
+    enable: false,
+    ver: 61
   },
 
   // 节点配置
