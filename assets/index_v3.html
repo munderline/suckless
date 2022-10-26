@@ -140,7 +140,8 @@
 		function showConf() {
 			for (const [id, node] of Object.entries(conf.node_map)) {
 				if (!node.hidden) {
-					addNodeItem(id, node.label)
+					// addNodeItem(id, node.label)
+           console.log(showConf)
 				}
 			}
 			updateSelected()
