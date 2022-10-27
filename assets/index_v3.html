@@ -29,16 +29,10 @@
 </head>
 <body>
   <div class="box">
-    <input id="txtURL" type="text" value="www.google.com" autofocus>
+    <input id="txtURL" type="text" value="www.startpage.com" autofocus>
   </div>
   <div class="box">
     <button id="btnGo">Go</button>
-  </div>
-  <div class="box">
-    <span>切换线路:</span>
-    <select id="selNode"></select>
-  </div>
-  <div class="box" id="list">
   </div>
   <script>
     const PAGE_CONF_SET = 110
@@ -101,13 +95,6 @@
 
     function onSwFail(err) {
       txtURL.value = err
-    }
-
-    selNode.onchange = function() {
-      const item = this.options[this.selectedIndex]
-      const node = item.value
-      conf.node_default = node
-      sendMsgToSw(PAGE_CONF_SET, conf)
     }
 
     function sendMsgToSw(cmd, val) {
